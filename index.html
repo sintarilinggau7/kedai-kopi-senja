@@ -1,518 +1,245 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kedai Kopi Senja</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f0e8;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        h1 {
-            background-color: #5c3825;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin: 0;
-        }
-
-        nav {
-            background-color: #3e261b;
-            text-align: center;
-            padding: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #ffd166;
-        }
-
-        h2 {
-            color: #5c3825;
-            border-bottom: 2px solid #8b5e3c;
-            padding-bottom: 8px;
-            margin: 25px 30px 15px;
-        }
-
-        p {
-            margin: 20px 30px;
-            line-height: 1.6;
-        }
-
-        table {
-            width: 90%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background-color: white;
-        }
-
-        th {
-            background-color: #5c3825;
-            color: white;
-        }
-
-        td, th {
-            border: 1px solid #ccc;
-            padding: 12px;
-            text-align: left;
-        }
-
-        tr:nth-child(even) {
-            background-color: #eee3d5;
-        }
-
-        ol {
-            margin-left: 30px;
-            line-height: 2;
-        }
-
-        img {
-            width: 300px;
-            max-width: 90%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin: 10px 30px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-        }
-
-        .gambar-kedai {
-            width: 500px;
-            height: 280px;
-        }
-
-        .gambar-menu {
-            display: inline-block;
-            text-align: center;
-        }
-
-        form {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            width: 85%;
-            margin: auto;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="number"],
-        textarea {
-            width: 95%;
-            padding: 10px;
-            margin-top: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #aaa;
-            border-radius: 5px;
-        }
-
-        .pilihan-menu {
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        .pilihan-menu label {
-            display: block;
-            margin-bottom: 12px;
-            cursor: pointer;
-        }
-
-        .pilihan-menu input {
-            margin-right: 8px;
-        }
-
-        button {
-            background-color: #5c3825;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #3e261b;
-        }
-
-        #hasilPemesanan {
-            display: none;
-            background-color: white;
-            padding: 20px;
-            width: 85%;
-            margin: 25px auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        #hasilPemesanan h2 {
-            margin: 10px 0 20px;
-            color: #5c3825;
-        }
-
-        #hasilPemesanan p {
-            background-color: #f5f0e8;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-
-        #totalHarga {
-            color: #5c3825;
-        }
-
-        #kontak {
-            background-color: #5c3825;
-            color: white;
-            padding: 20px;
-            border: none;
-        }
-
-        footer {
-            background-color: #3e261b;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-
-        footer p {
-            margin: 5px;
-        }
-
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 10px;
-            }
-
-            table {
-                width: 95%;
-                font-size: 13px;
-            }
-
-            form {
-                width: 85%;
-            }
-
-            .gambar-kedai {
-                width: 85%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kedai Kopi Senja</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Judul Website -->
+  <header>
     <h1>☕ Kedai Kopi Senja</h1>
+    <p>Hangatnya Kopi, Tenangnya Senja</p>
+  </header>
 
-    <!-- Navigasi -->
-    <nav>
-        <a href="#home">Home</a> |
-        <a href="#tentang">Tentang Kami</a> |
-        <a href="#menu">Menu</a> |
-        <a href="#pemesanan">Pemesanan</a> |
-        <a href="#kontak">Kontak</a>
-    </nav>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#menu">Menu</a>
+    <a href="#jadwal">Jam Buka</a>
+    <a href="#pemesanan">Pemesanan</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
 
-    <!-- Home -->
-    <h2 id="home">Selamat Datang di Kedai Kopi Senja</h2>
+  <main class="container">
 
-    <p>
-        Selamat datang di Kedai Kopi Senja. Kami menyediakan berbagai
-        pilihan kopi dengan rasa yang nikmat dan harga terjangkau.
-        Tempat yang nyaman untuk menikmati kopi bersama teman maupun keluarga.
-    </p>
+    <!-- Home & Tentang -->
+    <section id="home">
+      <h2>Selamat Datang di Kedai Kopi Senja</h2>
+      <p>
+        Kami menyediakan berbagai pilihan kopi dengan rasa yang nikmat dan harga
+        terjangkau. Tempat yang nyaman untuk menikmati kopi bersama teman maupun keluarga.
+      </p>
+    </section>
 
-    <!-- Tentang Kami -->
-    <h2 id="tentang">Tentang Kami</h2>
+    <section id="tentang">
+      <h2>Tentang Kami</h2>
+      <p>
+        Kedai Kopi Senja merupakan tempat untuk menikmati berbagai jenis minuman kopi
+        yang dibuat dari biji kopi pilihan. Kami mengutamakan kualitas rasa, pelayanan
+        yang baik, dan kenyamanan pelanggan.
+      </p>
+      <img class="gambar-kedai" src="kedai.png" alt="Suasana Kedai Kopi Senja">
+    </section>
 
-    <p>
-        Kedai Kopi Senja merupakan tempat untuk menikmati berbagai
-        jenis minuman kopi yang dibuat dari biji kopi pilihan.
-        Kami mengutamakan kualitas rasa, pelayanan yang baik,
-        dan kenyamanan pelanggan.
-    </p>
+    <!-- Menu dalam bentuk card -->
+    <section id="menu">
+      <h2>Daftar Menu Kopi</h2>
+      <div class="daftar-menu">
 
-    <img class="gambar-kedai"
-         src="kedai.png"
-         alt="Suasana Kedai Kopi Senja">
+        <div class="card">
+          <img src="espresso.jpg" alt="Espresso">
+          <h3>Espresso</h3>
+          <p>Kopi hitam dengan rasa kuat dan pekat.</p>
+          <p class="harga">Rp18.000</p>
+          <button type="button" data-menu="Espresso">Pesan</button>
+        </div>
 
-    <!-- Daftar Menu -->
-    <h2 id="menu">Daftar Menu Kopi</h2>
+        <div class="card">
+          <img src="cappuccino.jpg" alt="Cappuccino">
+          <h3>Cappuccino</h3>
+          <p>Perpaduan espresso dan susu dengan foam lembut.</p>
+          <p class="harga">Rp23.000</p>
+          <button type="button" data-menu="Cappuccino">Pesan</button>
+        </div>
 
-    <table>
+        <div class="card">
+          <img src="latte.jpg" alt="Caffe Latte">
+          <h3>Caffe Latte</h3>
+          <p>Kopi espresso dengan campuran susu creamy.</p>
+          <p class="harga">Rp25.000</p>
+          <button type="button" data-menu="Caffe Latte">Pesan</button>
+        </div>
+
+        <div class="card">
+          <img src="americano.jpg" alt="Americano">
+          <h3>Americano</h3>
+          <p>Kopi hitam dengan aroma dan rasa khas.</p>
+          <p class="harga">Rp21.000</p>
+          <button type="button" data-menu="Americano">Pesan</button>
+        </div>
+
+        <div class="card">
+          <img src="mocha.jpg" alt="Caffe Mocha">
+          <h3>Caffe Mocha</h3>
+          <p>Perpaduan kopi, susu, dan cokelat.</p>
+          <p class="harga">Rp30.000</p>
+          <button type="button" data-menu="Caffe Mocha">Pesan</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Tabel jam operasional -->
+    <section id="jadwal">
+      <h2>Jam Operasional</h2>
+      <table>
         <tr>
-            <th>No</th>
-            <th>Nama Menu</th>
-            <th>Deskripsi</th>
-            <th>Harga</th>
+          <th>Hari</th>
+          <th>Jam Buka</th>
+          <th>Jam Tutup</th>
         </tr>
-
         <tr>
-            <td>1</td>
-            <td>Espresso</td>
-            <td>Kopi hitam dengan rasa kuat dan pekat.</td>
-            <td>Rp18.000</td>
+          <td>Senin - Jumat</td>
+          <td>08.00</td>
+          <td>22.00</td>
         </tr>
-
         <tr>
-            <td>2</td>
-            <td>Cappuccino</td>
-            <td>Perpaduan espresso dan susu dengan foam lembut.</td>
-            <td>Rp23.000</td>
+          <td>Sabtu</td>
+          <td>09.00</td>
+          <td>23.00</td>
         </tr>
-
         <tr>
-            <td>3</td>
-            <td>Caffe Latte</td>
-            <td>Kopi espresso dengan campuran susu creamy.</td>
-            <td>Rp25.000</td>
+          <td>Minggu</td>
+          <td>10.00</td>
+          <td>22.00</td>
         </tr>
+      </table>
+    </section>
 
-        <tr>
-            <td>4</td>
-            <td>Americano</td>
-            <td>Kopi hitam dengan aroma dan rasa khas.</td>
-            <td>Rp21.000</td>
-        </tr>
-
-        <tr>
-            <td>5</td>
-            <td>Caffe Mocha</td>
-            <td>Perpaduan kopi, susu, dan cokelat.</td>
-            <td>Rp30.000</td>
-        </tr>
-    </table>
-
-    <!-- Gambar Menu -->
-    <h2>Gambar Menu Kopi</h2>
-
-    <p>Berikut beberapa pilihan menu kopi yang tersedia di kedai kami.</p>
-
-    <img src="espresso.jpg" alt="Espresso">
-
-    <img src="cappuccino.jpg" alt="Cappuccino">
-
-    <img src="latte.jpg" alt="Caffe Latte">
-
-    <img src="americano.jpg" alt="Americano">
-
-    <img src="mocha.jpg" alt="Caffe Mocha">
-
-    <!-- Prosedur Pemesanan -->
-    <h2>Prosedur Pemesanan</h2>
-
-    <ol>
+    <!-- Prosedur -->
+    <section id="prosedur">
+      <h2>Prosedur Pemesanan</h2>
+      <ol class="langkah">
         <li>Pilih satu atau beberapa menu kopi yang tersedia.</li>
         <li>Isi formulir pemesanan dengan data yang benar.</li>
         <li>Centang menu kopi yang ingin dipesan.</li>
         <li>Periksa hasil dan total harga pesanan.</li>
         <li>Lakukan pembayaran kepada kasir.</li>
         <li>Tunggu pesanan disiapkan.</li>
-    </ol>
+      </ol>
+    </section>
 
-    <!-- Hyperlink -->
-    <p>
-        Kunjungi juga situs:
-        <a href="https://www.starbucks.co.id/" target="_blank">
-            Starbucks Indonesia
-        </a>
-        untuk melihat informasi seputar produk kopi.
-    </p>
+    <!-- Form -->
+    <section id="pemesanan">
+      <h2>Formulir Pemesanan</h2>
+      <form id="formPemesanan">
 
-    <!-- Formulir Pemesanan -->
-    <h2 id="pemesanan">Formulir Pemesanan</h2>
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
 
-    <form id="formPemesanan">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Masukkan email" required>
 
-        Nama Lengkap:
-        <input type="text"
-               id="nama"
-               placeholder="Masukkan nama lengkap"
-               required>
+        <label for="telepon">Nomor Telepon</label>
+        <input type="tel" id="telepon" placeholder="Masukkan nomor telepon" required>
 
-        Email:
-        <input type="email"
-               id="email"
-               placeholder="Masukkan email"
-               required>
-
-        Nomor Telepon:
-        <input type="tel"
-               id="telepon"
-               placeholder="Masukkan nomor telepon"
-               required>
-
-        Pilih Menu Kopi:
-
+        <p class="label-grup">Pilih Menu Kopi</p>
         <div class="pilihan-menu">
-
-            <label>
-                <input type="checkbox" name="menu" value="Espresso">
-                Espresso - Rp18.000
-            </label>
-
-            <label>
-                <input type="checkbox" name="menu" value="Cappuccino">
-                Cappuccino - Rp23.000
-            </label>
-
-            <label>
-                <input type="checkbox" name="menu" value="Caffe Latte">
-                Caffe Latte - Rp25.000
-            </label>
-
-            <label>
-                <input type="checkbox" name="menu" value="Americano">
-                Americano - Rp21.000
-            </label>
-
-            <label>
-                <input type="checkbox" name="menu" value="Caffe Mocha">
-                Caffe Mocha - Rp30.000
-            </label>
-
+          <label><input type="checkbox" name="menu" value="Espresso"> Espresso - Rp18.000</label>
+          <label><input type="checkbox" name="menu" value="Cappuccino"> Cappuccino - Rp23.000</label>
+          <label><input type="checkbox" name="menu" value="Caffe Latte"> Caffe Latte - Rp25.000</label>
+          <label><input type="checkbox" name="menu" value="Americano"> Americano - Rp21.000</label>
+          <label><input type="checkbox" name="menu" value="Caffe Mocha"> Caffe Mocha - Rp30.000</label>
         </div>
 
-        Catatan:
-        <textarea id="catatan"
-                  placeholder="Tambahkan catatan pesanan"
-                  rows="4"></textarea>
+        <label for="catatan">Catatan</label>
+        <textarea id="catatan" placeholder="Tambahkan catatan pesanan" rows="4"></textarea>
 
         <button type="submit">Pesan Sekarang</button>
+      </form>
 
-    </form>
-
-    <!-- Hasil Pemesanan -->
-    <div id="hasilPemesanan">
-
+      <div id="hasilPemesanan">
         <h2>Hasil Pemesanan</h2>
-
         <div id="isiHasil"></div>
-
         <h3 id="totalHarga"></h3>
+      </div>
+    </section>
 
-    </div>
+  </main>
 
-    <!-- Kontak -->
-    <h2 id="kontak">Kontak Kami</h2>
-
+  <footer id="kontak">
+    <h2>Kontak Kami</h2>
     <p>Alamat: Jl. Kopi Senja No. 10, Indonesia</p>
-
     <p>Email: kopisenja@gmail.com</p>
+    <p>WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">081234567890</a></p>
+    <p class="copyright">Copyright &copy; 2026 Kedai Kopi Senja. All Rights Reserved.</p>
+  </footer>
 
-    <p>WhatsApp: 081234567890</p>
+  <script>
+    var hargaMenu = {
+      "Espresso": 18000,
+      "Cappuccino": 23000,
+      "Caffe Latte": 25000,
+      "Americano": 21000,
+      "Caffe Mocha": 30000
+    };
 
-    <p>
-        <a href="https://wa.me/6281234567890" target="_blank">
-            Hubungi Kami melalui WhatsApp
-        </a>
-    </p>
+    // Tombol "Pesan" di card -> centang menu di form lalu pindah ke form
+    document.querySelectorAll(".card button").forEach(function (tombol) {
+      tombol.addEventListener("click", function () {
+        var nama = tombol.getAttribute("data-menu");
+        document.querySelector('input[name="menu"][value="' + nama + '"]').checked = true;
+        document.getElementById("pemesanan").scrollIntoView({ behavior: "smooth" });
+      });
+    });
 
-    <!-- Footer -->
-    <footer>
-        <p>Copyright &copy; 2026 Kedai Kopi Senja. All Rights Reserved.</p>
-    </footer>
+    document.getElementById("formPemesanan").addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    <!-- JavaScript -->
-    <script>
-        document.getElementById("formPemesanan")
-        .addEventListener("submit", function(event) {
+      var nama = document.getElementById("nama").value;
+      var email = document.getElementById("email").value;
+      var telepon = document.getElementById("telepon").value;
+      var catatan = document.getElementById("catatan").value;
+      var pilihan = document.querySelectorAll('input[name="menu"]:checked');
 
-            event.preventDefault();
+      if (pilihan.length === 0) {
+        alert("Silakan pilih minimal satu menu kopi!");
+        return;
+      }
 
-            let nama = document.getElementById("nama").value;
-            let email = document.getElementById("email").value;
-            let telepon = document.getElementById("telepon").value;
-            let catatan = document.getElementById("catatan").value;
+      var isiHasil = document.getElementById("isiHasil");
+      isiHasil.replaceChildren();
+      var total = 0;
 
-            let hargaMenu = {
-                "Espresso": 15000,
-                "Cappuccino": 22000,
-                "Caffe Latte": 25000,
-                "Americano": 18000,
-                "Caffe Mocha": 27000
-            };
+      function tambah(tag, teks) {
+        var el = document.createElement(tag);
+        el.textContent = teks;
+        isiHasil.appendChild(el);
+      }
 
-            let pilihan = document.querySelectorAll(
-                'input[name="menu"]:checked'
-            );
+      tambah("p", "Nama: " + nama);
+      tambah("p", "Email: " + email);
+      tambah("p", "Nomor Telepon: " + telepon);
+      tambah("h3", "Detail Pesanan:");
 
-            if (pilihan.length === 0) {
-                alert("Silakan pilih minimal satu menu kopi!");
-                return;
-            }
+      pilihan.forEach(function (item) {
+        var harga = hargaMenu[item.value];
+        total += harga;
+        tambah("p", item.value + " - Rp" + harga.toLocaleString("id-ID"));
+      });
 
-            let isiHasil = document.getElementById("isiHasil");
+      tambah("p", "Catatan: " + (catatan || "-"));
 
-            isiHasil.replaceChildren();
+      document.getElementById("totalHarga").textContent =
+        "Total Pembayaran: Rp" + total.toLocaleString("id-ID");
 
-            let total = 0;
-
-            let data = [
-                "Nama: " + nama,
-                "Email: " + email,
-                "Nomor Telepon: " + telepon
-            ];
-
-            data.forEach(function(teks) {
-                let p = document.createElement("p");
-                p.textContent = teks;
-                isiHasil.appendChild(p);
-            });
-
-            let judul = document.createElement("h3");
-            judul.textContent = "Detail Pesanan:";
-            isiHasil.appendChild(judul);
-
-            pilihan.forEach(function(item) {
-
-                let harga = hargaMenu[item.value];
-
-                total += harga;
-
-                let p = document.createElement("p");
-
-                p.textContent = item.value + " - Rp" +
-                    harga.toLocaleString("id-ID");
-
-                isiHasil.appendChild(p);
-            });
-
-            let catatanHasil = document.createElement("p");
-
-            catatanHasil.textContent = "Catatan: " + (catatan || "-");
-
-            isiHasil.appendChild(catatanHasil);
-
-            document.getElementById("totalHarga").textContent =
-                "Total Pembayaran: Rp" +
-                total.toLocaleString("id-ID");
-
-            document.getElementById("hasilPemesanan").style.display = "block";
-
-            document.getElementById("hasilPemesanan").scrollIntoView({
-                behavior: "smooth"
-            });
-
-        });
-    </script>
+      var hasil = document.getElementById("hasilPemesanan");
+      hasil.style.display = "block";
+      hasil.scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
 
 </body>
 </html>
